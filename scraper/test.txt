@@ -1,0 +1,82 @@
+Found patch: 25-10
+Parsing champions and items from patch notes...
+Found Champions section
+{
+  "champions": {
+    "Cho'Gath": "Base Attack Speed increased. Q damage decreased. E damage increased.",
+    "Kayn": "Health Growth decreased.",
+    "Lulu": "Armor Growth decreased. R cooldown increased.",
+    "Fiddlesticks": "Q fear duration decreased and damage adjusted. W damage increased.",
+    "Naafiri": "P monster damage reduced.",
+    "Senna": "Passive crit chance and soul drop increased. Q heal decreased.",
+    "Smolder": "Passive Q damage/burn and E damage per stack increased.",
+    "Vi": "Q minimum damage decreased, max damage increased. R Mana cost reduced, damage decreased.",
+    "Xin Zhao": "Armor Growth decreased.",
+    "Yuumi": "R heal decreased."
+  }
+}
+Found Items section
+{
+  "items": {
+    "Bloodletter's Curse": [
+      "Ability Power: 60 -> 65",
+      "Health: 350 -> 400",
+      "Magic Resist Shred per Stack: 5% -> 7.5%",
+      "Max Shred: 30% (unchanged)"
+    ],
+    "Cryptbloom": [
+      "Ability Power: 60 -> 75",
+      "Life from Death Heal: 100 (+ 25% AP) -> 100 (+ 20% AP)",
+      "Recipe: Blighting Jewel + Fiendish Codex + 900 Gold -> Blighting Jewel + Fiendish Codex + Fiendish Codex + 200 Gold",
+      "Total Gold Cost: 2850 -> 3000"
+    ],
+    "Hextech Rocketbelt": [
+      "Ability Power: 60 -> 70",
+      "Health: 350 -> 300",
+      "Ability Haste: 15 -> 20",
+      "Recipe: Alternator + Kindlegem + 700 Gold -> Alternator + Fiendish Codex + Ruby Crystal + 300 Gold",
+      "Total Gold Cost: 2600 -> 2650",
+      "Updated cast indicator to more accurately represent bolt angles and ranges.",
+      "Item may now be manually cast with a click to confirm."
+    ],
+    "Horizon Focus": [
+      "Ability Power: 75 -> 110",
+      "Hypershot Damage Amp: Removed",
+      "Recipe: Fiendish Codex + Fiendish Codex + Amplifying Tome + 600 Gold -> Fiendish Codex + Fiendish Codex + Blasting Wand + 350 Gold",
+      "Total Gold Cost: 2700 -> 2900"
+    ],
+    "Liandry's Torment": [
+      "Ability Power: 70 -> 60"
+    ],
+    "Lich Bane": [
+      "Ability Power: 115 -> 100",
+      "Recipe: Sheen + Aether Wisp + Needlessly Large Rod + 200 Gold -> Sheen + Aether Wisp + Blasting Wand + 250 Gold",
+      "Total Gold Cost: 3200 -> 2900"
+    ],
+    "Luden's Companion": [
+      "Total Gold Cost: 2850 -> 2750",
+      "Tooltip now shows the maximum single target damage."
+    ],
+    "Malignance": [
+      "Ability Power: 85 -> 90"
+    ],
+    "Morellonomicon": [
+      "Total Gold Cost: 2950 -> 2850"
+    ],
+    "Nashor's Tooth": [
+      "Total Gold Cost: 3000 -> 2900"
+    ],
+    "Rabadon's Deathcap": [
+      "Total Gold Cost: 3600 -> 3500"
+    ],
+    "Seraph's Embrace": [
+      "Lifeline Shield: 200 (+ 20% Current Mana) -> 18% Max Mana"
+    ],
+    "Stormsurge": [
+      "Total Gold Cost: 2900 -> 2800",
+      "Move Speed: 4% -> 6%",
+      "Gold on preemptive takedown: Removed",
+      "Move Speed on Squall: Removed"
+    ]
+  }
+}

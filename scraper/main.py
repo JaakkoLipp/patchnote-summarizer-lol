@@ -1,41 +1,48 @@
-import requests
-import json
-from bs4 import BeautifulSoup
+import utils
+from fastapi import FastAPI
 
-# get patchnote
-url = "https://www.leagueoflegends.com/en-us/news/game-updates/patch-25-11-notes/"
+app = FastAPI()
 
-def get_patch(url):
-    r = requests.get(url,allow_redirects=True)
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Patch Notes API!"}
 
-    # make patch.html with write binary mode on r.content
-    open('patch.html', 'wb').write(r.content)
+#########################
+# Champions Endpoints
+#########################
 
-def parse_to_json():
-    with open('patch.html', 'r', encoding='utf-8') as file:
-        soup = BeautifulSoup(file, 'html.parser')
+@app.get("/champions/{patch_version}")
+def get_champions_by_version(patch_version: str):
+    """
+    Endpoint to get champions for a specific patch version.
+    """
+    return utils.parse_champions(patch_version)
 
-    patch_data = {
-        "title": soup.find('h1').text.strip(),
-        "date": soup.find('time').text.strip(),
-        "content": []
-    }
+@app.get("/champions/")
+def get_latest_champions():
+  """
+  Endpoint to get champions for the latest patch version.
+  """
+  patch_version = utils.find_patch_version()
+  champions_data = utils.parse_champions(patch_version)
+  return champions_data
 
-    for section in soup.find_all('section'):
-        section_title = section.find('h2')
-        if section_title:
-            patch_data["content"].append({
-                "section_title": section_title.text.strip(),
-                "items": []
-            })
-            for item in section.find_all('li'):
-                patch_data["content"][-1]["items"].append(item.text.strip())
+#########################
+# Items Endpoints
+#########################
 
-    with open('patch.json', 'w', encoding='utf-8') as json_file:
-        json.dump(patch_data, json_file, indent=4, ensure_ascii=False)
+@app.get("/items/{patch_version}")
+def get_items_by_version(patch_version: str):
+    """
+    Endpoint to get items for a specific patch version.
+    """
+    return utils.parse_items(patch_version)
 
-
-if __name__ == "__main__":
-    print("league patchnote scraped successfully")
-    get_patch(url)
-    parse_to_json()
+@app.get("/items/")
+def get_latest_items():
+    """
+    Endpoint to get items for the latest patch version.
+    """
+    patch_version = utils.find_patch_version()
+    items_data = utils.parse_items(patch_version)
+    return items_data
