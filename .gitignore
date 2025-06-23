@@ -23,6 +23,9 @@ coverage.xml
 *.hypothesis/
 .pytest_cache/
 
+# html files
+*.html
+
 # Virtual environments
 env/
 venv/
