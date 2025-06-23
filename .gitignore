@@ -23,8 +23,8 @@ coverage.xml
 *.hypothesis/
 .pytest_cache/
 
-# html files
-*.html
+# html files in scraper folder
+scraper/*.html
 
 # Virtual environments
 env/
