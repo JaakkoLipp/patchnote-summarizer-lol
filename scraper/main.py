@@ -46,3 +46,19 @@ def get_latest_items():
     patch_version = utils.find_patch_version()
     items_data = utils.parse_items(patch_version)
     return items_data
+
+
+@app.get("/other/")
+def get_latest_other():
+    """
+    Endpoint to get other data for the latest patch version.
+    """
+    return utils.parse_other(utils.find_patch_version())
+
+@app.get("/other/{patch_version}")
+def get_other_by_version(patch_version: str):
+    """
+    Endpoint to get other data for a specific patch version.
+    """
+    return utils.parse_other(patch_version)
+
