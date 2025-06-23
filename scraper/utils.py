@@ -57,7 +57,7 @@ def parse_champions(patch_version):
         
         if champions_h2:
             print("Found Champions section")
-            current = champions_h2.parent.next_sibling
+            current = champions_h2.parent.find_next_sibling()
 
             while current:
                 if current.name == 'h2' or (current.name == 'header' and current.find('h2')):
