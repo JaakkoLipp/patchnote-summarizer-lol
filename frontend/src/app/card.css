@@ -1,0 +1,41 @@
+.card {
+  background: #23272f;
+  color: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: box-shadow 0.2s;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.card p {
+  margin: 0 0 1rem 0;
+  color: #bfc4cc;
+  font-size: 1rem;
+}
+
+.card :last-child {
+  margin-bottom: 0;
+}
+
+.card ul,
+.card ol {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: left;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
