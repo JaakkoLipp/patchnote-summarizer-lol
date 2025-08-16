@@ -23,15 +23,27 @@ coverage.xml
 *.hypothesis/
 .pytest_cache/
 
-# Ignore all HTML and TXT files
-*.html
-*.txt
+# Type checkers & linters
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pyre/
 
 # Virtual environments
 env/
 venv/
 ENV/
 venv.bak/
+.venv/
+
+# Backend patch HTML cache (keep fixtures already tracked)
+backend/patch-*.html
+
+# Environment files
+.env
+.env.*
+backend/.env
+frontend/.env
 
 # Node
 node_modules/
@@ -40,7 +52,22 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 yarn.lock
+pnpm-debug.log*
+pnpm-lock.yaml
+
+# Vite/Frontend build outputs and caches
+frontend/dist/
+frontend/.vite/
+.vite/
+*.tsbuildinfo
+.eslintcache
 
 # Logs
 logs/
 *.log
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
