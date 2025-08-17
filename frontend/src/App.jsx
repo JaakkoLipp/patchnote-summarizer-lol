@@ -206,7 +206,7 @@ export default function App() {
   return (
     <div className="container">
       <header className="header">
-        <h1>Patchnote Summarizer</h1>
+        <h1>League of Legends Patchnote Summarizer</h1>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           {!!availableVersions.length && (
             <select
@@ -230,7 +230,7 @@ export default function App() {
           {tagline}
           {aiLoading && (
             <span className="muted" style={{ marginLeft: 8 }}>
-              — Generating summary…
+              — Generating AI summary…
             </span>
           )}
           {!aiLoading && aiSummary && (
